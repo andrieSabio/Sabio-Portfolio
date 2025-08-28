@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Andrie Miguel Sabio — Portfolio</title>
+  <meta name="description" content="Portfolio of Andrie Miguel Sabio — Information Technology student and aspiring developer." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071028 0%, var(--bg) 100%);color:#e6eef6;line-height:1.45}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .avatar:hover {
+      transform: scale(1.1);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px;align-items:start}
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:28px;border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:32px;letter-spacing:-0.5px}
+    p.lead{color:var(--muted);margin-top:8px}
+
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;text-align:center;min-width:86px}
+    .stat b{display:block;font-size:18px;color:var(--accent)}
+
+    .resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+
+    section h2{margin-top:0}
+    ul{margin:0;padding-left:18px}
+
+    .contact{display:flex;flex-direction:column;gap:8px}
+
+    footer{margin:40px 0 20px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:920px){.hero{grid-template-columns:1fr;}.avatar{width:64px;height:64px}.resume-grid{grid-template-columns:1fr}}
+
+    /* Add these new interactive styles */
+    nav a {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(2,6,23,0.8);
+    }
+
+    .stat {
+      transition: background 0.3s ease;
+    }
+    .stat:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    button {
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    input, textarea {
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    /* Add smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img class="avatar" src="https://scontent.filo1-1.fna.fbcdn.net/v/t39.30808-6/532073981_1296985628469371_1979876663016308471_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEGuhGajB6ED6wVoqAhGSncrlLSJoRL68iuUtImhEvryF8QsAPxzIB1osF38iuQTAVzDRa2Y2W6mMKjR_h9mKJe&_nc_ohc=g83F78I8wusQ7kNvwHvVbKA&_nc_oc=AdnZXq79GLRGad2BbnaUfGX0V4A41VJ0m1NlREGVYs37EzkzIiaJFnhCrQpljDOSLZ8&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&_nc_gid=LQjRtPokV0deK07jHTzHcQ&oh=00_AfVOgW9t8MGV2ebci0CQjPotp7irR7ss3Pe5iTq_qAsMng&oe=68A39F94" alt="Andrie Miguel Sabio">
+        <div>
+          <div style="font-size:14px;color:var(--muted)">Portfolio</div>
+          <div style="font-weight:800">Andrie Miguel Sabio</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div class="card">
+          <h1>Hi, I'm Andrie Miguel Sabio</h1>
+          <p class="lead">Information Technology student at STI West Negros University. I build simple, useful web apps and I love turning ideas into working prototypes and products.</p>
+
+          <div class="stats">
+            <div class="stat"><b>STI WNU</b><small style="display:block;color:var(--muted)">College</small></div>
+            <div class="stat"><b>Project Manager / Data Analyst</b><small style="display:block;color:var(--muted)">Skill Focus</small></div>
+            <div class="stat"><b>Fast Learner</b><small style="display:block;color:var(--muted)">Personal</small></div>
+          </div>
+
+          <div class="resume-grid">
+            <div>
+              <section id="about">
+                <h2>About</h2>
+                <p style="color:var(--muted)">Seeking a responsible and challenging position with a turbulent and dynamic organization which offers opportunities for personal and professional development and where I can best utilize my knowledge and skills.</p>
+
+                <h3 style="margin-bottom:6px">Contact</h3>
+                <div class="contact" style="color:var(--muted)">
+                  <div>Bacolod City, Mansillingan, Grandville 1</div>
+                  <div>Email: <a href="mailto:Sabioandriemiguel@gmail.com">Sabioandriemiguel@gmail.com</a></div>
+                  <div>Phone: 09936417869</div>
+                </div>
+              </section>
+
+              <section id="education" style="margin-top:16px">
+                <h3>Education</h3>
+                <ul style="color:var(--muted)">
+                  <li><strong>STI West Negros University</strong> — Bachelor of Science in Information Technology (2022 - present)</li>
+                  <li><strong>Senior High School</strong> — Negros Occidental High School (2020 - 2022)</li>
+                  <li><strong>High School</strong> — Negros Occidental High School (2019 - 2020)</li>
+                  <li><strong>Elementary</strong> — EC Montessori School</li>
+                </ul>
+              </section>
+            </div>
+
+            <div>
+              <section id="skills">
+                <h3>Skills & Strengths</h3>
+                <ul style="color:var(--muted)">
+                  <li>Computer Literate</li>
+                  <li>Excellent time management skills</li>
+                  <li>Good analytical and problem solving skills</li>
+                  <li>Good leadership skills</li>
+                  <li>Customer Service: friendly, patient, attentive</li>
+                  <li>Multitasking & time management during peak hours</li>
+                  <li>Personal attributes: fast learner, stress management, punctuality</li>
+                </ul>
+
+                <h3 style="margin-top:12px">Languages</h3>
+                <div style="color:var(--muted)">English</div>
+
+                <h3 style="margin-top:12px">Career Objective</h3>
+                <p style="color:var(--muted)">Seeking a responsible and challenging position with a turbulent and dynamic organization which offers opportunities for personal and professional development and where I can best utilize my knowledge and skills.</p>
+              </section>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="projects" class="card" style="margin-top:18px">
+          <h2>Projects & Experience</h2>
+          <p style="color:var(--muted)">
+            <li>Inventory Management App — React Native + Firebase (pre-final practical exam project)</li>
+            <li>Automated Livestock Health Monitoring (capstone concept)</li>
+            <li>VerifiMe — PWD MANAGEMENT SYSTEM WITH OCR TECHNOLOGY (capstone project - PROJECT MANAGER)</li>
+          </p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Resume Snapshot</h3>
+          <p style="color:var(--muted);margin-top:6px"></p>
+          <dl style="color:var(--muted);margin-top:12px">
+            <dt style="font-weight:700">Name</dt>
+            <dd>Andrie Miguel Sabio</dd>
+            <dt style="font-weight:700">Location</dt>
+            <dd>Bacolod City</dd>
+            <dt style="font-weight:700">Email</dt>
+            <dd><a href="mailto:Sabio.andriemiguel@gmail.com">Sabioandriemiguel@gmail.com</a></dd>
+            <dt style="font-weight:700">Phone</dt>
+            <dd>09936417869</dd>
+          </dl>
+
+          <div style="margin-top:12px">
+            <a href="#contact" style="display:inline-block;padding:10px 14px;border-radius:8px;background:rgba(110,231,183,0.12);color:var(--accent);text-decoration:none;font-weight:700">Contact me</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3>Download CV</h3>
+          <p style="color:var(--muted)">Download a printable copy of your CV.</p>
+          <a href="./assets/Sabio_RESUME.pdf" download style="display:inline-block;margin-top:8px;padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.04);color:var(--muted);text-decoration:none">Download PDF</a>
+        </div>
+      </aside>
+    </main>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">Like what you see? Reach out.</p>
+        <form action="https://formsubmit.co/Sabioandriemiguel@gmail.com" method="POST" style="display:grid;gap:10px;margin-top:8px">
+          <!-- Honeypot to prevent spam -->
+          <input type="text" name="_honey" style="display:none">
+          
+          <!-- Disable captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          
+          <!-- Success page after submission -->
+          <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+          
+          <input type="text" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <textarea name="message" placeholder="Message" rows="4" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <button type="submit" style="padding:10px;border-radius:8px;border:0;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#052024;font-weight:700">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      Built with ❤️ — Andrie Miguel Sabio
+  </div>
+</body>
+</html>
